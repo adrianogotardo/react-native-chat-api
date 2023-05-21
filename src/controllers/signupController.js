@@ -1,5 +1,5 @@
-import * as signupService from '../services/signupService';
-import * as userService from '../services/userService';
+import * as signupService from '../services/signupService.js';
+import * as userService from '../services/userService.js';
 
 async function signup(req, res) {
     const { name, email, password } = req.body;

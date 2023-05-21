@@ -1,8 +1,8 @@
-import { userSchema } from "../../schemas/User";
+import { User } from "../../schemas/User.js";
 import bcrypt from 'bcrypt';
 
 async function createUser(name, email, password) {
-    const newUser = new userSchema({name, email, password});
+    const newUser = new User({name, email, password});
     return newUser;
 };
 

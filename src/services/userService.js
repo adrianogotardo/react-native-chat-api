@@ -1,7 +1,7 @@
-import { userSchema } from "../../schemas/User";
+import { User } from "../../schemas/User.js";
 
 async function getUserByEmail(email) {
-    return userSchema.findOne({ email }).exec();
+    return User.findOne({ email }).exec();
 };
 
 export { getUserByEmail }
