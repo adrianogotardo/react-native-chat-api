@@ -5,14 +5,12 @@ async function signup(req, res) {
     const { name, email, password } = req.body;
 
     if(!name || !email || !password) {
-        return res.status(400).json({
-            'message': 'Name, email and password are required.'
-        });
+        return res.status(400).send({message: 'Name, email and password are required'});
     };
 
     const unavailableEmail = await userService.getUserByEmail(email);
     if(unavailableEmail) {
-        return res.sendStatus(409);
+        return res.status(409).send({message: "Email already in use"});
     };
 
     try {
