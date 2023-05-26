@@ -1,4 +1,4 @@
-import { User } from "../../schemas/User.js";
+import { User } from "../schemas/User.js";
 import bcrypt from 'bcrypt';
 
 async function createUser(name, email, password) {
