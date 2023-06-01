@@ -10,7 +10,7 @@ async function keepAlive() {
 
 function startKeepAlive() {
     if(process.env.KEEPALIVE_URL){
-        setInterval(keepAlive, 30000);
+        setInterval(keepAlive, 3000);
     } else {
         console.log("It seems like KEEPALIVE_URL is not defined. Keep-alive requests will not be sent.")
     }

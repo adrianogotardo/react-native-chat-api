@@ -16,7 +16,10 @@ app.use(cors());
 
 connectDatabase();
 
-app.get("/keep-alive", (req, res) => sendStatus(201));
+app.get("/keep-alive", (req, res) => {
+    return res.sendStatus(201);
+});
+
 app.post("/signup", signup);
 app.post("/signin", signin);
 
